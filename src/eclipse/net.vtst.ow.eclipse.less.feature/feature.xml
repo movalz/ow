@@ -2,7 +2,7 @@
 <feature
       id="net.vtst.ow.eclipse.less.feature"
       label="LESS"
-      version="1.0.22.msg-life-1"
+      version="1.0.22.msg-life-2"
       provider-name="Vincent Simonet">
 
    <description url="http://www.normalesup.org/~simonet/soft/ow/eclipse-less.en.html">
@@ -21,28 +21,28 @@
          id="net.vtst.eclipse.easyxtext"
          download-size="0"
          install-size="0"
-         version="1.0.15.msg-life-1"
+         version="1.0.15.msg-life-2"
          unpack="false"/>
 
    <plugin
          id="net.vtst.eclipse.easyxtext.ui"
          download-size="0"
          install-size="0"
-         version="1.0.15.msg-life-1"
+         version="1.0.15.msg-life-2"
          unpack="false"/>
 
    <plugin
          id="net.vtst.ow.eclipse.less"
          download-size="0"
          install-size="0"
-         version="1.0.22.msg-life-1"
+         version="1.0.22.msg-life-2"
          unpack="false"/>
 
    <plugin
          id="net.vtst.ow.eclipse.less.ui"
          download-size="0"
          install-size="0"
-         version="1.0.22.msg-life-1"
+         version="1.0.22.msg-life-2"
          unpack="false"/>
 
 </feature>

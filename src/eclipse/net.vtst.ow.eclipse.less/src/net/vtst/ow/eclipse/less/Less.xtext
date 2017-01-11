@@ -533,7 +533,7 @@ terminal fragment NL : '\n' | '\r\n' | '\r' /*| '\f'*/;
 terminal fragment IDENT_CHAR : ('_'|'a'..'z'|'A'..'Z'|'0'..'9'|'-');
 terminal fragment NMSTART: ('_'|'a'..'z'|'A'..'Z') /* | NON_ASCII */ | ESCAPE;
 terminal fragment NMCHAR: IDENT_CHAR /* | NON_ASCII */ | ESCAPE;
-terminal IDENT : '-'? NMSTART NMCHAR*;
+terminal IDENT : ('-' | '--')? NMSTART NMCHAR*;
 terminal AT_IDENT : '@' IDENT_CHAR+;
 terminal fragment STRING1: '"' (!('\n' | '\r' /*| '\f'*/ | '\\' | '\"') | '\\' NL | ESCAPE)* '"';
 terminal fragment STRING2: '\'' (!('\n' | '\r' /*| '\f'*/ | '\\' | '\'') | '\\' NL | ESCAPE)* '\'';
