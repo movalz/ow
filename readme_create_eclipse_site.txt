@@ -5,9 +5,9 @@ steps to create a new eclipsed site with the plugins in a new version:
 		set a new Bundle-Version, e.g. Version: 1.0.15.msg-life-2
 3. edit ow\src\eclipse\net.vtst.ow.eclipse.less\META-INF\MANIFEST.MF:
 		set a new Bundle-Version, e.g. Version: 1.0.22.msg-life-2
-3. edit ow\src\eclipse\net.vtst.ow.eclipse.less.ui\META-INF\MANIFEST.MF:
+4. edit ow\src\eclipse\net.vtst.ow.eclipse.less.ui\META-INF\MANIFEST.MF:
 		set a new Bundle-Version, e.g. Version: 1.0.22.msg-life-2
-4. open ow\src\eclipse\net.vtst.ow.eclipse.less.feature\feature.xml in Eclipse
+5. open ow\src\eclipse\net.vtst.ow.eclipse.less.feature\feature.xml in Eclipse
 		- click tab "included plugins"
 		- click button "Versions..."
 		- Select option "Copy versions from plug-in and fragment manifests" and click "Finish"
@@ -24,12 +24,12 @@ steps to create a new eclipsed site with the plugins in a new version:
 				- select the plugins and click "OK")
 		- click tab "Overview"
 		- update version to something like "1.0.22.msg-life-2"
-5. open C:\Projekte\IPL\Eclipse-LESS-Plugin\movalz_fork\ow\src\eclipse\net.vtst.ow.eclipse.site\site.xml in Eclipse:
+6. open C:\Projekte\IPL\Eclipse-LESS-Plugin\movalz_fork\ow\src\eclipse\net.vtst.ow.eclipse.site\site.xml in Eclipse:
 		- open root tree node and remove all existing entries
 		- click button "Add Feature..."
 		- enter "net.vtst" into "Enter an ID of a feature..." field, select entry and click OK
 		- click button "Build All"
-6. result can be found in c:\Projekte\IPL\Eclipse-LESS-Plugin\movalz_fork\ow\src\eclipse\net.vtst.ow.eclipse.site
+7. result can be found in c:\Projekte\IPL\Eclipse-LESS-Plugin\movalz_fork\ow\src\eclipse\net.vtst.ow.eclipse.site
 		- copy the files of this directory except .project and .gitignore to a network location like
 		  \\le-s-fs02\projekte\OpenIpl\tools\eclipse\less-css-plugin-1.0.22.msg-life-2\net.vtst.ow.eclipse.site
 		  and use this location to install plugins into an eclipse installation
