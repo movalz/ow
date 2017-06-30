@@ -81,6 +81,9 @@ public class LessProjectProperty {
   }
 
   public static IProject getProject(Resource resource) {
+	if (resource == null) {
+		return null;
+	}
     IFile file = getFile(resource.getURI());
     if (file != null) return file.getProject();
     else return null;

@@ -114,7 +114,9 @@ public class LessMixinScopeProvider {
   }
 
   private void fillScopeForBlock(MixinScope scope, Block block, EObject statementToIgnore, int position, MixinScopeElement element) {
-    fillScopeForStatements(scope, block.getContent().getStatement(), statementToIgnore, position, element);
+	  if (block != null && block.getContent() != null) {
+		  fillScopeForStatements(scope, block.getContent().getStatement(), statementToIgnore, position, element);
+	  }
   }
   
   private void fillScopeForStatements(
@@ -139,10 +141,12 @@ public class LessMixinScopeProvider {
           if (MixinUtils.isDefinition(mixin) && mixin.getSelectors().getSelector().size() == 1) {
             HashOrClassRef selector = mixin.getSelectors().getSelector().get(0);
             String selectorIdent = MixinUtils.getIdent(selector);
-            MixinScopeElement newElement = element.cloneAndExtends(selectorIdent, selector);
-            scope.addAtPosition(position, newElement);          
-            if (scope.getPath().isMatching(position, selectorIdent)) {
-              fillScopeForBlock(scope, mixin.getBody(), null, position + 1, newElement);
+            if (selectorIdent != null) {
+	            MixinScopeElement newElement = element.cloneAndExtends(selectorIdent, selector);
+	            scope.addAtPosition(position, newElement);          
+	            if (scope.getPath().isMatching(position, selectorIdent)) {
+	              fillScopeForBlock(scope, mixin.getBody(), null, position + 1, newElement);
+	            }
             }
           }
         } else if (obj instanceof ToplevelRuleSet) {

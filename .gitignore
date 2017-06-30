@@ -1,2 +1,11 @@
 /extsrc
 /tgt
+/src/eclipse/net.vtst.eclipse.easy.ui/.settings/org.sonarlint.eclipse.core.prefs
+/src/eclipse/net.vtst.eclipse.easyxtext.ui/.settings/org.sonarlint.eclipse.core.prefs
+/src/eclipse/net.vtst.eclipse.easyxtext/.settings/org.sonarlint.eclipse.core.prefs
+/src/eclipse/net.vtst.ow.eclipse.less.feature/.settings/org.sonarlint.eclipse.core.prefs
+/src/eclipse/net.vtst.ow.eclipse.less.ui/.settings/org.sonarlint.eclipse.core.prefs
+/src/eclipse/net.vtst.ow.eclipse.less/.settings/org.eclipse.jdt.core.prefs
+/src/eclipse/net.vtst.ow.eclipse.less/.settings/org.sonarlint.eclipse.core.prefs
+/src/eclipse/net.vtst.ow.eclipse.site/.settings/org.sonarlint.eclipse.core.prefs
+/readme.txt

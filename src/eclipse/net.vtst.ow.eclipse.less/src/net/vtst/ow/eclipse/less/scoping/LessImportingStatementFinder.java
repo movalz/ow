@@ -228,8 +228,7 @@ public class LessImportingStatementFinder implements IResourceChangeListener {
       StyleSheet styleSheet = this.getStyleSheet();
       if (styleSheet != null) {
         for (ResolvedImportStatement ris : importStatementResolver.getResolvedImportStatements(styleSheet)) {
-          if (!ris.hasError()) {
-            // TODO: This might be null?
+          if (!ris.hasError() && ris.getImportedStyleSheet() != null && ris.getImportedStyleSheet().eResource() != null) {
             ResourceAdapter adapter = getOrCreateResourceAdapter(ris.getImportedStyleSheet().eResource());
             importedResources.add(adapter);
             adapter.addImportingStatement(this.resource, ris.getStatement());

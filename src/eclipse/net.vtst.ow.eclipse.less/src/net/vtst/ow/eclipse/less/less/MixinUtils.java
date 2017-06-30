@@ -4,6 +4,7 @@ import net.vtst.ow.eclipse.less.scoping.MixinPath;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtext.nodemodel.ICompositeNode;
 import org.eclipse.xtext.nodemodel.util.NodeModelUtils;
 
 /**
@@ -124,7 +125,12 @@ public class MixinUtils {
   }
   
   private static String getIdentText(EObject obj) {
-    return NodeModelUtils.getTokenText(NodeModelUtils.getNode(obj));
+    ICompositeNode node = NodeModelUtils.getNode(obj);
+    if (node == null) {
+    	return null;
+    } else {
+    	return NodeModelUtils.getTokenText(node);
+    }
   }
   
   public static String getIdent(AtVariableRefTarget obj) {

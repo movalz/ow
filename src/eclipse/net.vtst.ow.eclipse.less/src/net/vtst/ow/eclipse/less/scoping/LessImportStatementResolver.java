@@ -7,19 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import net.vtst.ow.eclipse.less.LessMessages;
-import net.vtst.ow.eclipse.less.LessRuntimeModule;
-import net.vtst.ow.eclipse.less.less.Block;
-import net.vtst.ow.eclipse.less.less.ImportStatement;
-import net.vtst.ow.eclipse.less.less.InnerRuleSet;
-import net.vtst.ow.eclipse.less.less.LessPackage;
-import net.vtst.ow.eclipse.less.less.Mixin;
-import net.vtst.ow.eclipse.less.less.StyleSheet;
-import net.vtst.ow.eclipse.less.less.ToplevelRuleSet;
-import net.vtst.ow.eclipse.less.parser.LessValueConverterService;
-import net.vtst.ow.eclipse.less.properties.LessProjectProperty;
-import net.vtst.ow.eclipse.less.resource.LessResourceDescriptionStrategy;
-
+import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.common.util.URI;
@@ -36,7 +24,21 @@ import org.eclipse.xtext.validation.ValidationMessageAcceptor;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 
+import net.vtst.ow.eclipse.less.LessMessages;
+import net.vtst.ow.eclipse.less.LessRuntimeModule;
+import net.vtst.ow.eclipse.less.less.Block;
+import net.vtst.ow.eclipse.less.less.ImportStatement;
+import net.vtst.ow.eclipse.less.less.InnerRuleSet;
+import net.vtst.ow.eclipse.less.less.LessPackage;
+import net.vtst.ow.eclipse.less.less.Mixin;
+import net.vtst.ow.eclipse.less.less.StyleSheet;
+import net.vtst.ow.eclipse.less.less.ToplevelRuleSet;
+import net.vtst.ow.eclipse.less.parser.LessValueConverterService;
+import net.vtst.ow.eclipse.less.properties.LessProjectProperty;
+import net.vtst.ow.eclipse.less.resource.LessResourceDescriptionStrategy;
+
 public class LessImportStatementResolver {
+  private static final Logger logger = Logger.getLogger(LessImportStatementResolver.class);
 
   // The cache contains:
   // - (ResolvedImportStatement.class, ImportStatement) => ResolvedImportStatement
@@ -84,9 +86,16 @@ public class LessImportStatementResolver {
       // resource.
       return null;
     }      
-  }
+    catch (NullPointerException e) {
+      logger.warn("NullPointerException thrown for resource " + resource + " and uri " + uri + " - can't load its ResourceDescription!");
+	  return null;
+    }      
+ }
   
   private IResourceDescription getResourceDescription(Resource resource, URI uri) {
+	if (resource == null) {
+		return null;
+	}
     IResourceDescription resourceDescription = loadResourceDescription(resource, uri);
     if (resourceDescription == null && uri.isRelative()) {
       IProject project = LessProjectProperty.getProject(resource);

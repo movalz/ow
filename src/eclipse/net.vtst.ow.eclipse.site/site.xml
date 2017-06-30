@@ -3,7 +3,28 @@
    <description name="net.vtst.ow" url="http://www.normalesup.org/~simonet/soft/ow/update/">
       net.vtst.ow
    </description>
-   <feature url="features/net.vtst.ow.eclipse.less.feature_1.0.22.msg-life-4.jar" id="net.vtst.ow.eclipse.less.feature" version="1.0.22.msg-life-4">
+   <feature url="features/net.vtst.ow.eclipse.less.feature_1.0.22.msg-life-8.jar" id="net.vtst.ow.eclipse.less.feature" version="1.0.22.msg-life-8">
+      <category name="net.vtst.ow"/>
+   </feature>
+   <feature url="features/net.vtst.ow.eclipse.less.feature_1.0.22.msg-life-8.jar" id="net.vtst.ow.eclipse.less.feature" version="1.0.22.msg-life-7">
+      <category name="net.vtst.ow"/>
+   </feature>
+   <feature url="features/net.vtst.ow.eclipse.less.feature_1.0.22.msg-life-8.jar" id="net.vtst.ow.eclipse.less.feature" version="1.0.22.msg-life-6">
+      <category name="net.vtst.ow"/>
+   </feature>
+   <feature url="features/net.vtst.ow.eclipse.less.feature_1.0.22.msg-life-8.jar" id="net.vtst.ow.eclipse.less.feature" version="1.0.22.msg-life-5">
+      <category name="net.vtst.ow"/>
+   </feature>
+   <feature url="features/net.vtst.ow.eclipse.less.feature_1.0.22.msg-life-8.jar" id="net.vtst.ow.eclipse.less.feature" version="1.0.22.msg-life-4">
+      <category name="net.vtst.ow"/>
+   </feature>
+   <feature url="features/net.vtst.ow.eclipse.less.feature_1.0.22.msg-life-8.jar" id="net.vtst.ow.eclipse.less.feature" version="1.0.22.msg-life-3">
+      <category name="net.vtst.ow"/>
+   </feature>
+   <feature url="features/net.vtst.ow.eclipse.less.feature_1.0.22.msg-life-8.jar" id="net.vtst.ow.eclipse.less.feature" version="1.0.22.msg-life-2">
+      <category name="net.vtst.ow"/>
+   </feature>
+   <feature url="features/net.vtst.ow.eclipse.less.feature_1.0.22.msg-life-8.jar" id="net.vtst.ow.eclipse.less.feature" version="1.0.22.msg-life-1">
       <category name="net.vtst.ow"/>
    </feature>
    <category-def name="net.vtst.ow" label="net.vtst.ow"/>
